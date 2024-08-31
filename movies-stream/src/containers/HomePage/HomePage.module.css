@@ -1,0 +1,16 @@
+.HomeLayout{
+    display: flex;
+
+}
+
+.middleContentLayout{
+    width: 70%;
+    margin: auto;
+    margin-top: 10vh;
+    padding: 0 15px;
+}
+
+/* .sidebarLayout{
+    width: 15%;
+} */
+
