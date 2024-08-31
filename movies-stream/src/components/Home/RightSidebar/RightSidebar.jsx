@@ -1,42 +1,46 @@
 import styles from "./RightSidebar.module.css";
+import { useContext } from "react";
+import ThemeContext from "../../../contexts/ThemeContext";
+
 
 const RightSidebar = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div className={styles.container}>
       <div className={styles.mediaServicesSction}>
-        <h2 className={styles.sidebarTitle}>media services</h2>
+        <h2 className={styles.sidebarTitle + ' ' + theme}>media services</h2>
         <div className={styles.mediaRow}>
           <div className={styles.mediaImage}></div>
-          <p className={styles.mediaName}>apple tv</p>
+          <p className={styles.mediaName + ' ' + theme}>apple tv</p>
         </div>
         <div className={styles.mediaRow}>
           <div className={styles.mediaImage}></div>
-          <p className={styles.mediaName}>disney tv</p>
-        </div>
-
-        <div className={styles.mediaRow}>
-          <div className={styles.mediaImage}></div>
-          <p className={styles.mediaName}>hbo max tv</p>
+          <p className={styles.mediaName + ' ' + theme}>disney tv</p>
         </div>
 
         <div className={styles.mediaRow}>
           <div className={styles.mediaImage}></div>
-          <p className={styles.mediaName}>hulu</p>
+          <p className={styles.mediaName + ' ' + theme}>hbo max tv</p>
         </div>
 
         <div className={styles.mediaRow}>
           <div className={styles.mediaImage}></div>
-          <p className={styles.mediaName}>prime</p>
+          <p className={styles.mediaName + ' ' + theme}>hulu</p>
+        </div>
+
+        <div className={styles.mediaRow}>
+          <div className={styles.mediaImage}></div>
+          <p className={styles.mediaName + ' ' + theme}>prime</p>
         </div>
       </div>
       <div className={styles.genreSection}>
-        <h2 className={styles.sidebarTitle}>genre</h2>
-         <p className={styles.genreName}>action</p>
-         <p className={styles.genreName}>comedy</p>
+        <h2 className={styles.sidebarTitle + ' ' + theme}>genre</h2>
+         <p className={styles.genreName + ' ' + theme}>action</p>
+         <p className={styles.genreName + ' ' + theme}>comedy</p>
          <div className={styles.genreContainer}>
             <p className={styles.genreName}>drama</p>
          </div>
-         <p className={styles.genreName}>horror</p>
+         <p className={styles.genreName + ' ' + theme}>horror</p>
 
       </div>
     </div>

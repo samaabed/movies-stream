@@ -1,11 +1,13 @@
 import styles from "./MainContent.module.css";
+import { useContext } from "react";
+import ThemeContext from "../../../contexts/ThemeContext";
 
 const MainContent = () => {
-  return (
-    // <div className={styles.container}>
-<>
-      <div className={styles.upperRow}>
+  const { theme } = useContext(ThemeContext);
 
+  return (
+    <>
+      <div className={styles.upperRow}>
         <div className={styles.leftImage}>
           <div className={styles.imageTrend}>
             <p>#1 in series</p>
@@ -32,8 +34,10 @@ const MainContent = () => {
       <div className={styles.bottomRow}>
         <div className={styles.continueWatching}>
           <div className={styles.continueWatchingTitle}>
-            <p>coninue watching <span>(3 movies remaining)</span></p>
-            <button>see more</button>
+            <p className={theme}>
+              coninue watching <span>(3 movies remaining)</span>
+            </p>
+            <button className={theme}>see more</button>
           </div>
           <div className={styles.imagesContainer}>
             <div className={styles.image}></div>
@@ -43,9 +47,7 @@ const MainContent = () => {
 
         <div className={styles.sideImage}></div>
       </div>
-    {/* </div> */}
-
-</>
+    </>
   );
 };
 
