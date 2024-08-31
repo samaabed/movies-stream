@@ -1,6 +1,12 @@
-.HomeLayout{
+.darkHomeLayout, .lightHomeLayout{
     display: flex;
+}
+.darkHomeLayout {
+    background-color: var(--backgroundColor);
+}
 
+.lightHomeLayout {
+    background-color: white;
 }
 
 .middleContentLayout{
@@ -10,7 +16,6 @@
     padding: 0 15px;
 }
 
-/* .sidebarLayout{
-    width: 15%;
-} */
+
+
 

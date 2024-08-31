@@ -35,7 +35,10 @@
 }
 
 .mediaImage {
-    background-color: white;
+    /* background-color: white; */
+    background-image: url(../../../assets/images/film-action.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 40px;
     height: 30px;
     border-radius: 5px;
